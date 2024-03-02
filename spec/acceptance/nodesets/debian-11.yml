@@ -1,0 +1,11 @@
+HOSTS:
+  debian-11-x64:
+    platform: debian-11-x64
+    hypervisor : docker
+    image: debian:bullseye
+    docker_preserve_image: true
+    docker_cmd: '["/sbin/init"]'
+    docker_image_commands:
+      - 'apt-get install --yes wget iproute2'
+CONFIG:
+  type: foss
